@@ -7,9 +7,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Create audio element
     const audio = new Audio();
-    audio.src = "https://antyserv.in/8218/stream"; // Radio stream URL
+    audio.src = "https://mx.hdaudiostreaming.com/8130/stream"; // Radio stream URL
     audio.volume = 0.7;
     audio.crossOrigin = "anonymous"; // Important for some streams
+    
     
     let isPlaying = false;
     
@@ -195,7 +196,7 @@ if (sonicArt) {
     const artUrl = artStyle.backgroundImage;
     
     // Si no tenemos una URL de arte guardada o si hay un cambio de canción, permitir actualización
-    if (currentArtUrl === '' && artUrl !== 'url("https://xatimg.com/image/dPFZ2T0y8dkB.png")') {
+    if (currentArtUrl === '' && artUrl !== 'url("https://xatimg.com/image/OkgNwk2gOtiW.jpg")') {
         currentArtUrl = artUrl;
     } else if (currentArtUrl !== '' && artUrl !== currentArtUrl) {
         // Si intentan cambiar la carátula sin cambio de canción, restaurar la anterior

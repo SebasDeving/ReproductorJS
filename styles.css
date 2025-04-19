@@ -1,185 +1,168 @@
-
-    /* Estilo del bydev */
-    .bydev {
+/* Estilo del bydev */
+.bydev {
         
-        bottom: 10px;
-        right: 10px;
-        font-size: 10px;
-        color: #fff;
-        text-align: right;
-    }
-    
-    .bydev a {
-        color: #fff;
-        text-decoration: none;
-    }
-    .bydev1 {
-        bottom: 10px;
-        right: 1px;
-        font-size: 10px;
-        color: #fff;
-        text-align: right;
-    }
-    
-    body {
-        font-family: 'Arial', sans-serif;
-        background-color: #333;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-    
-    /* Contenedor principal más grande */
-    .player-container {
-        background-color: rgb(33 0 65 / 59%);
-        border-radius: 10px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-        padding: 56px;
-        width: 430px;
-        height: 29em;
-        text-align: center;
-        backdrop-filter: blur(10px);
-        position: relative;
-        overflow: hidden;
-        margin-top: 50px;
-        margin-bottom: 20px;
-        transition: all 0.5s ease, filter 0.5s ease;
-    }
-    
-    @keyframes pulse {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-    }
-    
-    /* Modificar el estilo del radio-logo para posicionar el botón correctamente */
-    .radio-logo {
-        width: 120px;
-        height: 120px;
-        margin: 25px auto 20px;
-        border: 3px solid rgba(157, 78, 221, 0.7);
-        border-radius: 50%;
-        overflow: hidden;
-        position: relative;
-        animation: vinylSpin 3s linear infinite, glow 3s infinite alternate;
-        box-shadow: 0 0 15px rgba(157, 78, 221, 0.6);
-        z-index: 3;
-    }
+    bottom: 10px;
+    right: 10px;
+    font-size: 10px;
+    color: #fff;
+    text-align: right;
+}
 
-    /* Crear un pseudo-elemento para la imagen de fondo con opacidad */
-    .radio-logo::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url(https://xatimg.com/image/dPFZ2T0y8dkB.png);
-        background-size: cover;
-        background-position: center;
-        opacity: 0.8; /* Ajusta la opacidad aquí */
-        z-index: 1;
-    }
+.bydev a {
+    color: #fff;
+    text-decoration: none;
+}
+.bydev1 {
+    bottom: 10px;
+    right: 1px;
+    font-size: 10px;
+    color: #fff;
+    text-align: right;
+}
 
-    /* Añadir el círculo central del vinilo */
-    .radio-logo::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 20px;
-        height: 20px;
-        background: #333;
-        border: 1px solid rgba(157, 78, 221, 0.9);
-        border-radius: 50%;
-        box-shadow: 0 0 8px rgba(157, 78, 221, 0.8);
-        z-index: 2;
-    }
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://i0.xat.com/web_gear/chat/GetImage7.php?s&U=https://xatimg.com/image/H2g0XuYkbhfg.jpg');
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
-    /* Mejorar la animación de giro del vinilo */
-    @keyframes vinylSpin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-    }
+/* Contenedor principal más grande */
+.player-container {
+    background-color: rgb(0 0 0 / 47%);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    padding: 56px;
+    width: 430px;
+    height: 29em;
+    text-align: center;
+    backdrop-filter: blur(2px);
+    position: relative;
+    overflow: hidden;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    transition: all 0.5s ease, filter 0.5s ease;
+}
 
-    /* Mejorar el efecto de brillo */
-    @keyframes glow {
-        0% { 
-            box-shadow: 0 0 15px rgba(157, 78, 221, 0.5);
-            border-color: rgba(157, 78, 221, 0.6);
-        }
-        100% { 
-            box-shadow: 0 0 20px rgba(157, 78, 221, 0.8);
-            border-color: rgba(157, 78, 221, 0.9);
-        }
-    }
+@keyframes pulse {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 
-    /* Mantener la animación del disco cuando se pasa el cursor */
-    .radio-logo:hover {
-        box-shadow: 0 0 20px rgba(157, 78, 221, 0.8);
-    }
+/* Modificar el estilo del radio-logo para posicionar el botón correctamente */
+.radio-logo {
+    width: 120px;
+    height: 120px;
+    margin: 25px auto 20px;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    animation: vinylSpin 3s linear infinite, glow 3s infinite alternate;
+    box-shadow: 0 0 15px rgb(255, 255, 255);
+    z-index: 3;
+}
 
-    /* Modificar la posición de los controles del reproductor */
-    .radio-logo .player-controls {
+/* Crear un pseudo-elemento para la imagen de fondo con opacidad */
+.radio-logo::before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.3);
-    z-index: 5;
-    opacity: 1;
-    pointer-events: none;
-    /* Esta es la clave para evitar que gire con el tocadiscos */
-    animation: counterRotation 3s linear infinite;
+    background-image: url(https://xatimg.com/image/OkgNwk2gOtiW.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8; /* Ajusta la opacidad aquí */
+    z-index: 1;
+}
+
+/* Añadir el círculo central del vinilo */
+.radio-logo::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background: #333;
+    border: 1px solid rgba(0, 0, 0, 0.9);
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.8);
+    z-index: 2;
+}
+
+/* Mejorar la animación de giro del vinilo */
+@keyframes vinylSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Mejorar el efecto de brillo */
+@keyframes glow {
+    0% { 
+        box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+        border-color: rgba(255, 0, 0, 0.6);
+    }
+    100% { 
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+        border-color: rgba(255, 0, 0, 0.9);
+    }
+}
+
+/* Mantener la animación del disco cuando se pasa el cursor */
+.radio-logo:hover {
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+}
+
+/* Modificar la posición de los controles del reproductor */
+.radio-logo .player-controls {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: rgba(0, 0, 0, 0.3);
+z-index: 5;
+opacity: 1;
+pointer-events: none;
+/* Esta es la clave para evitar que gire con el tocadiscos */
+animation: counterRotation 3s linear infinite;
 }
 .history-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid rgba(157, 78, 221, 0.3);
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 15px;
+padding-bottom: 10px;
+border-bottom: 1px solid rgba(221, 78, 78, 0.3);
 }
 .history-header h3 {
-    color: white;
-    margin: 0;
-    font-size: 18px;
+color: white;
+margin: 0;
+font-size: 18px;
 }
 /* Animación que contrarresta la rotación del disco */
 @keyframes counterRotation {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(-360deg); }
+0% { transform: rotate(0deg); }
+100% { transform: rotate(-360deg); }
 }
 
-    /* Ajustar el estilo del botón de reproducción */
-    .radio-logo .play-button {
-        background-color: rgba(157, 78, 221, 0.8);
-        color: white;
-        border: none;
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        cursor: pointer;
-        font-size: 18px;
-        transition: all 0.3s;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 15px rgba(157, 78, 221, 0.6);
-        z-index: 6;
-        pointer-events: auto; /* Permite que el botón sea clickeable */
-    }
-
-    /* Ajustar el estilo del botón de reproducción */
+/* Ajustar el estilo del botón de reproducción */
 .radio-logo .play-button {
-    background-color: rgba(157, 78, 221, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
     border: none;
     border-radius: 50%;
@@ -188,476 +171,526 @@
     cursor: pointer;
     font-size: 18px;
     transition: all 0.3s;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 15px rgba(157, 78, 221, 0.6);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 0, 0, 0.6);
     z-index: 6;
-    pointer-events: auto;
+    pointer-events: auto; /* Permite que el botón sea clickeable */
 }
-    
-    /* Ajustar posición de los elementos flotantes */
-    .listeners-container {
-        color: white;
-        font-size: 13px;
-        background-color: rgba(0, 0, 0, 0.3);
-        border-radius: 12px;
-        padding: 5px 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 5px;
-        position: absolute;
-        top: 15px;
-        left: 15px;
-        z-index: 10;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    }
-    
-    .listeners-count {
-        font-weight: bold;
-        color: #c77dff;
-        animation: countPulse 2s infinite;
-    }
-    
-    @keyframes countPulse {
-        0% { transform: scale(1); }
-        50% { transform: scale(1.1); }
-        100% { transform: scale(1); }
-    }
-    
-    .dj-wrapper {
-        color: white;
-        font-size: 13px;
-        background-color: rgba(0, 0, 0, 0.3);
-        border-radius: 12px;
-        padding: 5px 10px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        justify-content: center;
-        position: absolute;
-        top: 50px; /* Aumentado para dar más espacio entre elementos */
-        left: 15px;
-        z-index: 10;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    }
-    
-    #sonic_dj {
-        color: white;
-        font-size: 13px;
-        background-color: transparent;
-        border-radius: 0;
-        padding: 0;
-        font-weight: bold;
-        display: inline;
-        animation: djPulse 3s infinite alternate;
-    }
-    
-    @keyframes djPulse {
-        0% { text-shadow: 0 0 5px rgba(157, 78, 221, 0.5); }
-        100% { text-shadow: 0 0 10px rgba(157, 78, 221, 1); }
-    }
-    
-    #sonic_art {
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        width: 100px;
-        height: 100px;
-        border-radius: 5px;
-        overflow: hidden;
-        background-color: rgba(0, 0, 0, 0.3);
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-        z-index: 10;
-        animation: fadeIn 1s;
-        background-image: url('https://xatimg.com/image/IFPXm9uBe5rD.png');
-        background-size: cover;
-        background-position: center;
-        border: 2px solid rgba(127, 122, 131, 0);
-        transition: transform 0.3s ease-in-out;
-    }
-    
-    #sonic_art:hover {
-        transform: scale(1.1);
-    }
-    
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
-    
-    /* Mejorar el espaciado de otros elementos */
-    .player-title.animated-title {
-        margin-bottom: 35px;
-        text-align: center;
-        position: relative;
-        padding: 20px 0;
-        overflow: visible;
-        background: transparent;
-    }
 
-    /* Contenedor de título con neón */
-    .neon-title {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        z-index: 2;
-        perspective: 800px;
-        transform-style: preserve-3d;
-    }
+/* Ajustar el estilo del botón de reproducción */
+.radio-logo .play-button {
+background-color: rgba(134, 8, 8, 0.8);
+color: white;
+border: none;
+border-radius: 50%;
+width: 40px;
+height: 40px;
+cursor: pointer;
+font-size: 18px;
+transition: all 0.3s;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 0, 0, 0.6);
+z-index: 6;
+pointer-events: auto;
+}
 
-    /* Estilo para las palabras */
-    .neon-word {
-        display: flex;
-        margin: 0 5px;
-        perspective: 1000px;
-        transform-style: preserve-3d;
-    }
-
-    .first-word {
-        margin-bottom: 5px;
-        animation: wordRotate 8s infinite ease-in-out;
-    }
-
-    .second-word {
-        animation: wordFloat 8s infinite ease-in-out alternate;
-    }
-
-    /* Estilo para cada letra con neón */
-    .neon-letter {
-        color: #fff;
-        font-size: 30px;
-        font-weight: 800;
-        letter-spacing: 2px;
-        margin: 0 3px;
-        text-transform: uppercase;
-        position: relative;
-        display: inline-block;
-        text-shadow:
-            0 0 6px rgba(255, 255, 255, 0.9),
-            0 0 12px rgba(157, 78, 221, 0.8),
-            0 0 24px rgba(157, 78, 221, 0.6),
-            0 0 32px rgba(157, 78, 221, 0.4);
-        animation: 
-            letterPulse 3s infinite ease-in-out alternate var(--delay),
-            letterFloat 5s infinite ease-in-out alternate var(--delay);
-        transform-style: preserve-3d;
-    }
-
-    /* Efecto de reflejo para las letras */
-    .neon-letter::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: -15px;
-        width: 100%;
-        height: 5px;
-        background: rgba(157, 78, 221, 0.3);
-        border-radius: 50%;
-        filter: blur(3px);
-        animation: reflectionPulse 3s infinite alternate var(--delay);
-    }
-
-    /* Ondas de audio debajo del título */
-    .audio-waves {
+/* Ajustar posición de los elementos flotantes */
+.listeners-container {
+    color: white;
+    font-size: 13px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    padding: 5px 10px;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    height: 45px;
-    width: -1em;
-    /* margin-top: 10px; */
-    z-index: 1;
-    position: relative;
-    transform: translateZ(-10px);
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-    .wave-bar {
-        width: 4px;
-        height: var(--height);
-        background: linear-gradient(to top, rgba(157, 78, 221, 0.2), rgba(157, 78, 221, 0.9));
-        margin: 0 4px;
-        border-radius: 2px;
-        animation: barDance 1.5s infinite ease-in-out alternate var(--delay);
-        box-shadow: 0 0 8px rgba(157, 78, 221, 0.6);
-        opacity: 0.8;
-    }
+.listeners-count {
+    font-weight: bold;
+    color: #ff5e5e;
+    animation: countPulse 2s infinite;
+}
 
-    /* Efecto de brillo en el fondo */
-    .glow-effect {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 120%;
-        height: 140%;
-        background: radial-gradient(
-            ellipse at center,
-            rgba(157, 78, 221, 0.2) 0%,
-            rgba(157, 78, 221, 0.1) 40%,
-            transparent 70%
-        );
-        filter: blur(20px);
-        z-index: 0;
-        opacity: 0.6;
-        animation: glowPulse 5s infinite alternate;
-        pointer-events: none;
-    }
+@keyframes countPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
 
-    /* Animaciones */
-    @keyframes letterPulse {
-        0% {
-            text-shadow:
-                0 0 6px rgba(255, 255, 255, 0.9),
-                0 0 12px rgba(157, 78, 221, 0.7),
-                0 0 24px rgba(157, 78, 221, 0.5);
-            color: rgba(255, 255, 255, 0.9);
-        }
-        100% {
-            text-shadow:
-                0 0 10px rgba(255, 255, 255, 1),
-                0 0 20px rgba(157, 78, 221, 0.9),
-                0 0 30px rgba(157, 78, 221, 0.7),
-                0 0 40px rgba(157, 78, 221, 0.5);
-            color: rgba(255, 255, 255, 1);
-        }
-    }
+.dj-wrapper {
+    color: white;
+    font-size: 13px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    position: absolute;
+    top: 50px; /* Aumentado para dar más espacio entre elementos */
+    left: 15px;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
 
-    @keyframes letterFloat {
-        0% { transform: translateY(0px) translateZ(0); }
-        30% { transform: translateY(-3px) translateZ(10px); }
-        70% { transform: translateY(2px) translateZ(5px); }
-        100% { transform: translateY(-1px) translateZ(0); }
-    }
+#sonic_dj {
+    color: white;
+    font-size: 13px;
+    background-color: transparent;
+    border-radius: 0;
+    padding: 0;
+    font-weight: bold;
+    display: inline;
+    animation: djPulse 3s infinite alternate;
+}
 
-    @keyframes reflectionPulse {
-        0% { opacity: 0.2; transform: scale(0.8); }
-        100% { opacity: 0.6; transform: scale(1.2); }
-    }
+@keyframes djPulse {
+    0% { text-shadow: 0 0 5px rgba(221, 78, 78, 0.5); }
+    100% { text-shadow: 0 0 10px rgba(221, 78, 78, 1); }
+}
 
-    @keyframes barDance {
-        0% { height: calc(var(--height) * 0.6); opacity: 0.6; }
-        100% { height: var(--height); opacity: 0.9; }
-    }
+#sonic_art {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    animation: fadeIn 1s;
+    background-image: url('https://xatimg.com/image/OkgNwk2gOtiW.jpg');
+    background-size: cover;
+    background-position: center;
+    border: 2px solid rgba(127, 122, 131, 0);
+    transition: transform 0.3s ease-in-out;
+}
 
-    @keyframes glowPulse {
-        0% { opacity: 0.4; filter: blur(20px); }
-        100% { opacity: 0.8; filter: blur(25px); }
-    }
+#sonic_art:hover {
+    transform: scale(1.1);
+}
 
-    @keyframes wordRotate {
-        0%, 100% { transform: rotateX(0deg); }
-        25% { transform: rotateX(2deg); }
-        75% { transform: rotateX(-2deg); }
-    }
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 
-    @keyframes wordFloat {
-        0% { transform: translateY(0); }
-        50% { transform: translateY(-3px); }
-        100% { transform: translateY(1px); }
-    }
+/* Mejorar el espaciado de otros elementos */
+.player-title.animated-title {
+    margin-bottom: 35px;
+    text-align: center;
+    position: relative;
+   
+    overflow: visible;
+    background: transparent;
+}
 
-    /* Intensificar animaciones cuando el reproductor está activo */
-    .player-container.playing .wave-bar {
-        animation-duration: 0.8s;
-    }
+/* Contenedor de título con neón */
+.neon-title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.7));
+}
 
-    .player-container.playing .neon-letter {
-        animation: 
-            letterPulse 2s infinite ease-in-out alternate var(--delay),
-            letterFloat 4s infinite ease-in-out alternate var(--delay);
-    }
+/* Estilo para las palabras */
+.neon-word {
+    display: flex;
+}
 
-    .player-container.playing .glow-effect {
-        opacity: 0.8;
-    }
+/* Estilo para cada letra con neón */
+.neon-letter {
+    display: inline-block;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 0 0 10px #ff0000, 0 0 15px #ff0000, 0 0 25px #ff0000, 0 0 40px #ff0000;
+    animation: neon-flicker 3s infinite alternate-reverse, neon-pulse 2s infinite;
+    animation-delay: var(--delay);
+    transform-style: preserve-3d;
+}
 
-    /* Interactividad al pasar el cursor */
-    .neon-letter:hover {
-        animation-play-state: paused;
-        color: #fff;
+/* Efecto de reflejo para las letras */
+.neon-letter::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, rgba(221, 78, 78, 0.3), rgba(78, 221, 78, 0.3));
+    border-radius: 50%;
+    filter: blur(3px);
+    animation: reflectionPulse 3s infinite alternate var(--delay);
+}
+
+.neon-reflection {
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(
+        to bottom, 
+        rgba(255, 0, 0, 0.5), 
+        rgba(255, 0, 0, 0.1)
+    );
+    filter: blur(3px);
+    border-radius: 50%;
+    transform: scaleX(0.8);
+    opacity: 0.6;
+    animation: reflection-pulse 2s infinite;
+}
+
+/* Ondas de audio debajo del título */
+.audio-waves {
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+    padding: 15px 0;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wave-bar {
+    width: 4px;
+    height: var(--height);
+    background: linear-gradient(to top, #ffffff, #ffffff);
+    border-radius: 2px;
+    animation: wave-animation 1.2s infinite ease-in-out;
+    animation-delay: var(--delay);
+}
+
+@keyframes wave-animation {
+    0%, 100% {
+        transform: scaleY(0.5);
+    }
+    50% {
+        transform: scaleY(1);
+    }
+}
+
+/* Efecto de brillo en el fondo */
+.glow-effect {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 140%;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(236, 1, 1, 0.2) 0%,
+        rgba(78, 221, 78, 0.1) 40%,
+        transparent 70%
+    );
+    filter: blur(20px);
+    z-index: 0;
+    opacity: 0.6;
+    animation: glowPulse 5s infinite alternate;
+    pointer-events: none;
+}
+
+/* Animaciones */
+@keyframes letterPulse {
+    0% {
+        text-shadow:
+            0 0 6px rgba(255, 255, 255, 0.9),
+            0 0 12px rgba(221, 78, 78, 0.7),
+            0 0 24px rgba(78, 221, 78, 0.5);
+        color: rgba(255, 255, 255, 0.9);
+    }
+    100% {
         text-shadow:
             0 0 10px rgba(255, 255, 255, 1),
-            0 0 20px rgba(199, 125, 255, 1),
-            0 0 30px rgba(199, 125, 255, 0.8),
-            0 0 40px rgba(199, 125, 255, 0.6),
-            0 0 50px rgba(199, 125, 255, 0.4);
-        transform: translateY(-5px) translateZ(20px) scale(1.2);
-        transition: transform 0.2s ease;
+            0 0 20px rgba(221, 78, 78, 0.9),
+            0 0 30px rgba(221, 78, 78, 0.7),
+            0 0 40px rgba(78, 221, 78, 0.5);
+        color: rgba(255, 255, 255, 1);
     }
-    
-    /* Estilos para el control de volumen */
-    .volume-control {
-        margin-top: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        padding: 0 5px; /* Agregar un poco de padding en los extremos */
-    }
+}
 
-    .volume-control i {
-        color: #ffffff;
-        font-size: 16px;
-        width: 20px; /* Ancho fijo para evitar saltos */
-        transition: color 0.3s;
-    }
+@keyframes letterFloat {
+    0% { transform: translateY(0px) translateZ(0); }
+    30% { transform: translateY(-3px) translateZ(10px); }
+    70% { transform: translateY(2px) translateZ(5px); }
+    100% { transform: translateY(-1px) translateZ(0); }
+}
 
-    .volume-control i:hover {
-        color: #c77dff;
-    }
+@keyframes reflectionPulse {
+    0% { opacity: 0.2; transform: scale(0.8); }
+    100% { opacity: 0.6; transform: scale(1.2); }
+}
 
-    .volume-slider {
-        width: 60%;
-        -webkit-appearance: none;
-        height: 6px;
-        background: linear-gradient(to right, 
-            #9d4edd 0%, 
-            #9d4edd var(--volume-percent, 70%), 
-            rgba(255, 255, 255, 0.3) var(--volume-percent, 70%)
-        );
-        border-radius: 5px;
-        outline: none;
-        position: relative;
-    }
+@keyframes barDance {
+    0% { height: calc(var(--height) * 0.6); opacity: 0.6; }
+    100% { height: var(--height); opacity: 0.9; }
+}
 
-    .volume-slider::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        appearance: none;
-        width: 15px;
-        height: 15px;
-        background: #c77dff;
-        border-radius: 50%;
-        cursor: pointer;
-        border: 2px solid rgba(255, 255, 255, 0.8);
-        box-shadow: 0 0 10px rgba(157, 78, 221, 0.6);
-        transition: all 0.2s;
-    }
-    
-    .volume-slider::-webkit-slider-thumb:hover {
-        transform: scale(1.2);
-        background: #9d4edd;
-        box-shadow: 0 0 15px rgba(157, 78, 221, 0.8);
-    }
+@keyframes glowPulse {
+    0% { opacity: 0.4; filter: blur(20px); }
+    100% { opacity: 0.8; filter: blur(25px); }
+}
 
-    .volume-slider:active::-webkit-slider-thumb {
-        transform: scale(1.3);
-        background: #c77dff;
-    }
+@keyframes wordRotate {
+    0%, 100% { transform: rotateX(0deg); }
+    25% { transform: rotateX(2deg); }
+    75% { transform: rotateX(-2deg); }
+}
 
-    .volume-slider::-moz-range-progress {
-        background-color: #9d4edd;
-        height: 6px;
-        border-radius: 5px;
-    }
+@keyframes wordFloat {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+    100% { transform: translateY(1px); }
+}
 
-    .volume-slider::-moz-range-thumb {
-        width: 15px;
-        height: 15px;
-        background: #c77dff;
-        border-radius: 50%;
-        cursor: pointer;
-        border: 2px solid rgba(255, 255, 255, 0.8);
-        box-shadow: 0 0 10px rgba(157, 78, 221, 0.6);
+@keyframes neon-flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 1;
+        text-shadow: 0 0 10px #ff0000, 0 0 15px #ff0000, 0 0 25px #ff0000, 0 0 40px #ff0000;
     }
-    
-    .volume-percentage {
-        color: #ffffff;
-        font-size: 12px;
-        min-width: 32px; /* Ancho fijo para evitar saltos de diseño */
-        text-align: right;
-        font-weight: bold;
+    20%, 22%, 24%, 55% {
+        opacity: 0.8;
+        text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000;
     }
-    
-    .now-playing {
-        color: white;
-        font-size: 14px;
-        margin-top: 20px; /* Aumentado de 15px a 20px */
-        padding: 10px 2px 8px; /* Aumentado el padding vertical */
-        background-color: rgba(0, 0, 0, 0.2);
-        border-radius: 5px;
-        overflow: hidden;
-        position: relative;
-        width: 100%;
-        height: 22px; /* Aumentado de 20px a 22px */
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-    }
-    
-    .song-title {
-        color: #ffffff;
-        font-weight: bold;
-        display: block;
-        margin-top: 5px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        animation: marquee 15s linear infinite;
-    }
-    
-    @keyframes marquee {
-        0% { transform: translateX(100%); }
-        100% { transform: translateX(-100%); }
-    }
-    
-    
-    
-    /* Estilos para el sonic_title tenga un marquee adecuado */
-    #sonic_title {
-        color: #ffffff;
-        font-weight: bold;
-        display: inline-block;
-        white-space: nowrap;
-        position: relative;
-        padding-right: 285px;
-        animation: marquee-contained 12s linear infinite;
-        width: max-content;
-        font-size: 1.5em;
-    }
+}
 
-    @keyframes marquee-contained {
-        0% { transform: translateX(100%); } /* Comienza fuera del contenedor a la derecha */
-        100% { transform: translateX(-100%); } /* Termina fuera del contenedor a la izquierda */
+@keyframes neon-pulse {
+    0%, 100% {
+        filter: brightness(1);
     }
+    50% {
+        filter: brightness(1.5);
+    }
+}
 
-    /* Estilos para que el sonic_listeners tenga la animación de pulso */
-    #sonic_listeners {
-        color: #ffffff;
-        animation: countPulse 2s infinite;
-        display: inline-block; /* Para que el elemento mantenga el pulso adecuadamente */
+@keyframes reflection-pulse {
+    0%, 100% {
+        opacity: 0.3;
+        width: 80%;
+        left: 10%;
     }
+    50% {
+        opacity: 0.6;
+        width: 90%;
+        left: 5%;
+    }
+}
 
-    /* Estilo para el icono de audífonos */
-    .fa-headphones {
-        margin-right: 5px;
-        color: #ffffff; /* Mismo color que los números de oyentes */
-        animation: headphonesPulse 3s infinite alternate;
-    }
+/* Intensificar animaciones cuando el reproductor está activo */
+.player-container.playing .wave-bar {
+    animation-duration: 0.8s;
+}
 
-    @keyframes headphonesPulse {
-        0% { transform: scale(1); opacity: 0.7; }
-        100% { transform: scale(1.1); opacity: 1; }
-    }
-    /* Modificación de los contenedores de efectos para limitarlos al reproductor */
-.music-notes-container, .sparkles-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 2;
+.player-container.playing .neon-letter {
+    animation: 
+        letterPulse 2s infinite ease-in-out alternate var(--delay),
+        letterFloat 4s infinite ease-in-out alternate var(--delay);
+}
+
+.player-container.playing .glow-effect {
+    opacity: 0.8;
+}
+
+/* Interactividad al pasar el cursor */
+.neon-letter:hover {
+    animation-play-state: paused;
+    color: #fff;
+    text-shadow:
+        0 0 15px #ff0000, 0 0 25px #ff0000, 0 0 35px #ff0000, 0 0 50px #ff3333;
+    transform: scale(1.1);
+    transition: all 0.2s ease;
+}
+
+/* Estilos para el control de volumen */
+.volume-control {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 5px; /* Agregar un poco de padding en los extremos */
+}
+
+.volume-control i {
+    color: #ffffff;
+    font-size: 16px;
+    width: 20px; /* Ancho fijo para evitar saltos */
+    transition: color 0.3s;
+}
+
+.volume-control i:hover {
+    color: #ff0000;
+}
+
+.volume-slider {
+    width: 60%;
+    -webkit-appearance: none;
+    height: 6px;
+    background: linear-gradient(to right, 
+        #dd4e4e 0%, 
+        #dd4e4e var(--volume-percent, 70%), 
+        rgba(255, 255, 255, 0.3) var(--volume-percent, 70%)
+    );
+    border-radius: 5px;
+    outline: none;
+    position: relative;
+}
+
+.volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #ff0000;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(103, 207, 117, 0.6);
+    transition: all 0.2s;
+}
+
+.volume-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+    background: #dd4e4e;
+    box-shadow: 0 0 15px rgba(78, 221, 78, 0.8);
+}
+
+.volume-slider:active::-webkit-slider-thumb {
+    transform: scale(1.3);
+    background: #ff7d7d;
+}
+
+.volume-slider::-moz-range-progress {
+    background-color: #dd4e4e;
+    height: 6px;
+    border-radius: 5px;
+}
+
+.volume-slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: #4edd4e;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(221, 78, 78, 0.6);
+}
+
+.volume-percentage {
+    color: #ffffff;
+    font-size: 12px;
+    min-width: 32px; /* Ancho fijo para evitar saltos de diseño */
+    text-align: right;
+    font-weight: bold;
+}
+
+.now-playing {
+    color: white;
+    font-size: 14px;
+    margin-top: 20px; /* Aumentado de 15px a 20px */
+    padding: 10px 2px 8px; /* Aumentado el padding vertical */
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
     overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 22px; /* Aumentado de 20px a 22px */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.song-title {
+    color: #ffffff;
+    font-weight: bold;
+    display: block;
+    margin-top: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+
+
+/* Estilos para el sonic_title tenga un marquee adecuado */
+#sonic_title {
+    color: #ffffff;
+    font-weight: bold;
+    display: inline-block;
+    white-space: nowrap;
+    position: relative;
+    padding-right: 285px;
+    animation: marquee-contained 12s linear infinite;
+    width: max-content;
+    font-size: 1.5em;
+}
+
+@keyframes marquee-contained {
+    0% { transform: translateX(100%); } /* Comienza fuera del contenedor a la derecha */
+    100% { transform: translateX(-100%); } /* Termina fuera del contenedor a la izquierda */
+}
+
+/* Estilos para que el sonic_listeners tenga la animación de pulso */
+#sonic_listeners {
+    color: #ffffff;
+    animation: countPulse 2s infinite;
+    display: inline-block; /* Para que el elemento mantenga el pulso adecuadamente */
+}
+
+/* Estilo para el icono de audífonos */
+.fa-headphones {
+    margin-right: 5px;
+    color: #ffffff; /* Mismo color que los números de oyentes */
+    animation: headphonesPulse 3s infinite alternate;
+}
+
+@keyframes headphonesPulse {
+    0% { transform: scale(1); opacity: 0.7; }
+    100% { transform: scale(1.1); opacity: 1; }
+}
+/* Modificación de los contenedores de efectos para limitarlos al reproductor */
+.music-notes-container, .sparkles-container {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+pointer-events: none;
+z-index: 2;
+overflow: hidden;
 }
 
 /* Corregir las posiciones de inicio de las notas musicales */
 .music-note {
-    position: absolute;
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 24px;
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
-    animation: floatNote 12s linear infinite;
-    opacity: 0;
+position: absolute;
+color: rgba(255, 255, 255, 0.6);
+font-size: 24px;
+text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+animation: floatNote 12s linear infinite;
+opacity: 0;
 }
 
 .music-note:nth-child(1) { left: 20%; top: -30px; animation-delay: 0s; font-size: 25px; }
@@ -671,36 +704,36 @@
 
 /* Animación modificada para que las notas se muevan solo dentro del contenedor */
 @keyframes floatNote {
-    0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 0;
-    }
-    10% {
-        opacity: 0.8;
-    }
-    90% {
-        opacity: 0.6;
-    }
-    100% {
-        transform: translateY(380px) rotate(360deg);
-        opacity: 0;
-    }
+0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+}
+10% {
+    opacity: 0.8;
+}
+90% {
+    opacity: 0.6;
+}
+100% {
+    transform: translateY(380px) rotate(360deg);
+    opacity: 0;
+}
 }
 
 /* Modificar los brillos para que estén dentro del contenedor */
 .sparkle {
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    background: transparent;
-    border-radius: 50%;
-    box-shadow: 
-        0 0 4px #fff,
-        0 0 8px #fff,
-        0 0 12px rgba(199, 125, 255, 0.8),
-        0 0 16px rgba(199, 125, 255, 0.6);
-    animation: sparkleFloat 5s linear infinite;
-    opacity: 0;
+position: absolute;
+width: 6px;
+height: 6px;
+background: transparent;
+border-radius: 50%;
+box-shadow: 
+    0 0 4px #fff,
+    0 0 8px #fff,
+    0 0 12px rgba(255, 125, 125, 0.8),
+    0 0 16px rgba(125, 255, 125, 0.6);
+animation: sparkleFloat 5s linear infinite;
+opacity: 0;
 }
 
 /* Ajustar posiciones iniciales de los brillos */
@@ -715,21 +748,21 @@
 
 /* Animación modificada para que los brillos permanezcan dentro del contenedor */
 @keyframes sparkleFloat {
-    0% {
-        transform: translate(0, 0) scale(0);
-        opacity: 0;
-    }
-    10% {
-        opacity: 1;
-        transform: translate(0, 0) scale(1);
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        transform: translate(var(--x, 40px), var(--y, -40px)) scale(0.2);
-        opacity: 0;
-    }
+0% {
+    transform: translate(0, 0) scale(0);
+    opacity: 0;
+}
+10% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+}
+50% {
+    opacity: 1;
+}
+100% {
+    transform: translate(var(--x, 40px), var(--y, -40px)) scale(0.2);
+    opacity: 0;
+}
 }
 
 /* Ajustar las distancias de movimiento para los brillos */
@@ -744,246 +777,265 @@
 
 /* Efecto de brillo al pasar el cursor sobre el reproductor */
 .player-container {
-    transition: all 0.5s ease;
+transition: all 0.5s ease;
 }
 
 /* Modificar el funcionamiento del difuminado solo para el reproductor */
 .player-container.blur-background {
-    filter: blur(6px) brightness(0.5);
-    pointer-events: none;
+filter: blur(6px) brightness(0.5);
+pointer-events: none;
 }
 
 /* Mover el historial fuera del reproductor para que no se vea afectado por el filtro */
 /* Mover el historial fuera del reproductor para que no se vea afectado por el filtro */
 body > .history-container {
-    z-index: 999999;
+z-index: 999999;
 }
 /* Estilos para el contenedor de fecha y hora */
 .datetime-container {
-    color: white;
-    background-color: rgb(0 0 0 / 26%);
-    border-radius: 12px;
-    padding: 5px 10px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    justify-content: center;
-    margin-top: 7px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+color: white;
+background-color: rgb(0 0 0 / 26%);
+border-radius: 12px;
+padding: 5px 10px;
+display: flex;
+align-items: center;
+gap: 8px;
+justify-content: center;
+margin-top: 7px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .datetime-container i {
-    color: #9d4edd;
-    font-size: 14px;
+color: #ff0000;
+font-size: 14px;
 }
 
 #current-time, #current-date {
-    font-weight: bold;
+font-weight: bold;
 }
 
 .date-separator {
-    margin: 0 5px;
-    opacity: 0.6;
+margin: 0 5px;
+opacity: 0.6;
 }
 
 /* Animación sutil para el reloj */
 .datetime-container .fa-clock {
-    animation: clockPulse 2s infinite linear;
+animation: clockPulse 2s infinite linear;
 }
 
 @keyframes clockPulse {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(3deg); }
-    75% { transform: rotate(-3deg); }
-    100% { transform: rotate(0deg); }
+0% { transform: rotate(0deg); }
+25% { transform: rotate(3deg); }
+75% { transform: rotate(-3deg); }
+100% { transform: rotate(0deg); }
 }
 
 /* Estilos para el botón de historial */
 .history-button-container {
-    position: absolute;
-    top: 125px; /* Justo debajo del sonic_art (100px de alto + 15px de margen superior + 10px de espacio) */
-    right: 15px; /* Alineado con el borde derecho del sonic_art */
-    z-index: 10;
-    width: 100px; /* Mismo ancho que sonic_art */
-    display: flex;
-    justify-content: center;
+position: absolute;
+top: 125px; /* Justo debajo del sonic_art (100px de alto + 15px de margen superior + 10px de espacio) */
+right: 15px; /* Alineado con el borde derecho del sonic_art */
+z-index: 10;
+width: 100px; /* Mismo ancho que sonic_art */
+display: flex;
+justify-content: center;
 }
 /* Asegurar que el botón de cierre esté por encima */
 .close-history {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 18px;
-    cursor: pointer;
-    transition: all 0.2s;
+background: none;
+border: none;
+color: white;
+font-size: 18px;
+cursor: pointer;
+transition: all 0.2s;
 }
 .close-history:hover {
-    color: rgba(157, 78, 221, 1);
-    transform: scale(1.1);
+color: rgba(221, 78, 78, 1);
+transform: scale(1.1);
 }
 .history-button {
-    background-color: rgba(157, 78, 221, 0.7);
-    color: white;
-    border: none;
-    border-radius: 20px;
-    padding: 6px 12px;
-    font-size: 13px;
-    cursor: pointer;
-    transition: all 0.3s;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    width: 90%; /* Para que quede un poco más estrecho que el contenedor */
+background-color: rgba(221, 78, 78, 0.7);
+color: white;
+border: none;
+border-radius: 20px;
+padding: 6px 12px;
+font-size: 13px;
+cursor: pointer;
+transition: all 0.3s;
+display: flex;
+align-items: center;
+gap: 5px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+width: 90%; /* Para que quede un poco más estrecho que el contenedor */
 }
 
 .history-button:hover {
-    background-color: rgba(157, 78, 221, 0.9);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+background-color: rgba(221, 78, 78, 0.9);
+transform: translateY(-2px);
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .history-button i {
-    font-size: 12px;
+font-size: 12px;
 }
 
 /* Ajustar el z-index y otros estilos del contenedor del historial */
 .history-container {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    max-width: 400px;
-    max-height: 70vh;
-    background-color: rgba(27, 0, 53, 0.95);
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(157, 78, 221, 0.5);
-    z-index: 99999;
-    display: none;
-    border: 1px solid rgba(157, 78, 221, 0.8);
-    overflow: hidden;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 80%;
+max-width: 400px;
+max-height: 70vh;
+background-color: rgba(0, 53, 9, 0.582);
+border-radius: 10px;
+padding: 20px;
+box-shadow: 0 5px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.5);
+z-index: 99999;
+display: none;
+border: 1px solid rgba(78, 221, 78, 0.8);
+overflow: hidden;
 }
 
 .history-content {
-    overflow-y: auto;
-    flex-grow: 1;
-    color: white;
-    font-size: 14px;
-    max-height: 50vh;
+overflow-y: auto;
+flex-grow: 1;
+color: white;
+font-size: 14px;
+max-height: 50vh;
 }
 /* Garantizar que los controles del historial sean interactivos y visibles */
 
 .history-container.active {
-    display: flex;
-    flex-direction: column;
+display: flex;
+flex-direction: column;
 }
 /* Mejoras para el sonic_history con carátulas de álbumes */
 #sonic_history div {
-    padding: 12px 0;
-    border-bottom: 1px solid rgba(157, 78, 221, 0.3);
-    display: flex;
-    align-items: center;
-    transition: background-color 0.3s;
+padding: 12px 0;
+border-bottom: 1px solid rgba(255, 0, 0, 0.3);
+display: flex;
+align-items: center;
+transition: background-color 0.3s;
 }
 
 #sonic_history div:hover {
-    background-color: rgba(157, 78, 221, 0.1);
+background-color: rgba(78, 221, 78, 0.1);
 }
 
 /* Estilo para las imágenes de carátulas */
 #sonic_history img {
-    width: 50px;
-    height: 50px;
-    border-radius: 6px;
-    margin-right: 12px;
-    object-fit: cover;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: transform 0.3s ease;
+width: 50px;
+height: 50px;
+border-radius: 6px;
+margin-right: 12px;
+object-fit: cover;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+border: 1px solid rgba(255, 255, 255, 0.2);
+transition: transform 0.3s ease;
 }
 
 #sonic_history img:hover {
-    transform: scale(1.1);
+transform: scale(1.1);
 }
 
 /* Ajuste para el texto del título de la canción */
 #sonic_history span {
-    flex-grow: 1;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 13px;
-    color: #ffffff;
-    transition: color 0.3s;
-    padding-right: 5px;
+flex-grow: 1;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+font-size: 13px;
+color: #ffffff;
+transition: color 0.3s;
+padding-right: 5px;
 }
 
 #sonic_history span:hover {
-    color: rgba(157, 78, 221, 1);
+color: rgba(221, 78, 78, 1);
 }
 
 /* Estilo para la marca de tiempo (si existe) */
 #sonic_history small {
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 11px;
-    margin-left: auto;
-    min-width: 55px;
-    text-align: right;
+color: rgba(255, 255, 255, 0.6);
+font-size: 11px;
+margin-left: auto;
+min-width: 55px;
+text-align: right;
 }
 
 /* Animación de entrada para nuevos elementos */
 @keyframes fadeInSlide {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+from {
+    opacity: 0;
+    transform: translateY(10px);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
 }
 
 #sonic_history div:first-child {
-    animation: fadeInSlide 0.5s ease-out;
+animation: fadeInSlide 0.5s ease-out;
 }
 
 /* Estilo para el mensaje de carga */
 .loading-history {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px 0;
-    color: rgba(255, 255, 255, 0.7);
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 30px 0;
+color: rgba(255, 255, 255, 0.7);
 }
 
 .loading-history::after {
-    content: '...';
-    animation: loadingDots 1.5s infinite;
+content: '...';
+animation: loadingDots 1.5s infinite;
 }
 
 @keyframes loadingDots {
-    0%, 20% { content: '.'; }
-    40% { content: '..'; }
-    60%, 100% { content: '...'; }
+0%, 20% { content: '.'; }
+40% { content: '..'; }
+60%, 100% { content: '...'; }
 }
 
 /* Personalización de la barra de desplazamiento */
 .history-content::-webkit-scrollbar {
-    width: 8px;
+width: 8px;
 }
 
 .history-content::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+background: rgba(0, 0, 0, 0.2);
+border-radius: 10px;
 }
 
 .history-content::-webkit-scrollbar-thumb {
-    background: rgba(157, 78, 221, 0.6);
-    border-radius: 10px;
+background: linear-gradient(to bottom, rgba(221, 78, 78, 0.6), rgba(78, 221, 78, 0.6));
+border-radius: 10px;
 }
 
 .history-content::-webkit-scrollbar-thumb:hover {
-    background: rgba(157, 78, 221, 0.8);
+background: linear-gradient(to bottom, rgba(221, 78, 78,.8), rgba(78, 221, 78, 0.8));
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+.neon-letter {
+    font-size: 2.2rem;
+}
+.neon-title {
+    gap: 10px;
+}
+}
+
+@media (max-width: 480px) {
+.neon-letter {
+    font-size: 1.8rem;
+}
+.neon-title {
+    gap: 6px;
+}
 }
