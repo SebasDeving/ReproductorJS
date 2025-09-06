@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="styles.css">
     
     <!-- Widget script de Antyserv que proporciona información de la canción -->
-    <script id='sonic_js' data-port='8030' src='https://technoplayerserver.net/cp/widgets.js?r=321'></script>
+    <script id='sonic_js' data-port='8130' src='https://mx.hdaudiostreaming.com/cp/widgets.js'></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
    
 </head>
@@ -69,7 +69,7 @@
                 <div class="pulse-ring pulse-ring-3"></div>
             </div>
             
-            <img src="https://xatimg.com/image/L5E492aftkP0.png" alt="Radio La Calle Logo">
+            <img src="https://xatimg.com/image/lmZuOr9EOHOf.png" alt="Radio La Calle Logo">
             <!-- Insertar los controles de reproducción dentro del logo -->
             <div class="player-controls">
                 <button class="play-button" id="playButton">▶</button>
@@ -79,25 +79,18 @@
             <div class="neon-title">
                 <div class="title-container">
                     <span class="neon-word first-word">
-                        <span class="neon-letter" data-text="1">1</span>
-                        <span class="neon-letter" data-text="0">0</span>
-                        <span class="neon-letter" data-text="7">7</span>
-                        <span class="neon-letter" data-text=".">.</span>
-                        <span class="neon-letter" data-text="9">9</span>
+                         
                     </span>
                     <span class="neon-word second-word">
-                        <span class="neon-letter" data-text="S">S</span>
-                        <span class="neon-letter" data-text="E">E</span>
-                        <span class="neon-letter" data-text="N">N</span>
-                        <span class="neon-letter" data-text="T">T</span>
+                        <span class="neon-letter" data-text="R">R</span>
+                        <span class="neon-letter" data-text="A">A</span>
+                        <span class="neon-letter" data-text="D">D</span>
                         <span class="neon-letter" data-text="I">I</span>
-                        <span class="neon-letter" data-text="M">M</span>
-                        <span class="neon-letter" data-text="I">I</span>
-                        <span class="neon-letter" data-text="E">E</span>
-                        <span class="neon-letter" data-text="N">N</span>
-                        <span class="neon-letter" data-text="T">T</span>
                         <span class="neon-letter" data-text="O">O</span>
-                        <span class="neon-letter" data-text="S">S</span>
+                        <span class="neon-letter" data-text=""></span>
+                        <span class="neon-letter" data-text="V">V</span>
+                        <span class="neon-letter" data-text="I">I</span>
+                        <span class="neon-letter" data-text="P">P</span>
                     </span>
                 </div>
             </div>
@@ -168,7 +161,7 @@
     </div>  
     <style>
         /* Estilo del bydev */
-.bydev {
+    .bydev {
         
         bottom: 10px;
         right: 10px;
@@ -191,7 +184,7 @@
     
     body {
         font-family: 'Arial', sans-serif;
-        background-image: url('https://i0.xat.com/web_gear/chat/GetImage7.php?s&U=https://xatimg.com/image/RZ1ZdTSDXqPP.png');
+        background-image: url('https://i0.xat.com/web_gear/chat/GetImage7.php?s&U=https://xatimg.com/image/fNMfk0YMSAPr.jpg');
         margin: 0;
         padding: 0;
         display: flex;
@@ -213,7 +206,7 @@
             inset 0 0 20px rgba(232, 232, 232, 0.3);
         padding: 56px;
         width: 430px;
-        height: 33em;
+        height: 29em;
         text-align: center;
         backdrop-filter: blur(2px);
         position: relative;
@@ -416,7 +409,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url(https://xatimg.com/image/L5E492aftkP0.png);
+        background-image: url(https://xatimg.com/image/lmZuOr9EOHOf.png);
         background-size: cover;
         background-position: center;
         opacity: 0.8; /* Ajusta la opacidad aquí */
@@ -1547,7 +1540,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Create audio element
     const audio = new Audio();
-    audio.src = "https://technoplayerserver.net/8030/stream"; // Radio stream URL
+    audio.src = "https://mx.hdaudiostreaming.com/8130/stream"; // Radio stream URL
     audio.volume = 0.7;
     audio.crossOrigin = "anonymous"; // Important for some streams
     
@@ -1721,13 +1714,19 @@ const sonicArt = document.getElementById('sonic_art');
 const sonicDj = document.getElementById('sonic_dj');
 
 // Si hay un cambio en la canción, permitir actualizaciones
-if (sonicTitle && sonicTitle.textContent.trim() !== currentSong) {
-    // Almacenar la nueva canción
-    currentSong = sonicTitle.textContent.trim();
-    
-    // Reiniciar el bloqueo de actualizaciones para la carátula
-    // cuando hay una nueva canción
-    currentArtUrl = '';
+if (sonicTitle) {
+    let songText = sonicTitle.textContent.trim();
+    if (songText === '' || songText === '--' || songText.toLowerCase() === 'en vivo...' || songText.toLowerCase() === 'no hay información' || songText.toLowerCase() === 'no title' || songText.toLowerCase() === 'no hay título' || songText.toLowerCase() === 'no hay cancion' || songText.toLowerCase() === 'no song') {
+        sonicTitle.textContent = 'BIENVENIDOS A VIP';
+        songText = 'BIENVENIDOS A VIP';
+    }
+    if (songText !== currentSong) {
+        // Almacenar la nueva canción
+        currentSong = songText;
+        // Reiniciar el bloqueo de actualizaciones para la carátula
+        // cuando hay una nueva canción
+        currentArtUrl = '';
+    }
 }
 
 // Controlar actualizaciones de la carátula
@@ -1736,7 +1735,7 @@ if (sonicArt) {
     const artUrl = artStyle.backgroundImage;
     
     // Si no tenemos una URL de arte guardada o si hay un cambio de canción, permitir actualización
-    if (currentArtUrl === '' && artUrl !== 'url("https://xatimg.com/image/L5E492aftkP0.png")') {
+    if (currentArtUrl === '' && artUrl !== 'url("https://xatimg.com/image/lmZuOr9EOHOf.png")') {
         currentArtUrl = artUrl;
     } else if (currentArtUrl !== '' && artUrl !== currentArtUrl) {
         // Si intentan cambiar la carátula sin cambio de canción, restaurar la anterior
@@ -1813,11 +1812,16 @@ historyButton.addEventListener('click', function() {
 historyContainer.classList.add('active');
 playerContainer.classList.add('blur-background'); // Añadir efecto de difuminado
 
-// Opcional: Verificar si el contenido ya ha sido cargado
 const historyContent = document.getElementById('sonic_history');
-if (historyContent && historyContent.children.length === 0) {
-    // Podríamos mostrar un mensaje de carga o animación aquí
-    historyContent.innerHTML = '<div class="loading-history">Cargando historial...</div>';
+// Si no hay historial cargado o está vacío, mostrar mensaje personalizado
+if (historyContent) {
+    // Esperar un pequeño tiempo para que el widget cargue (por si es asíncrono)
+    setTimeout(function() {
+        // Si sigue vacío o solo tiene texto vacío
+        if (historyContent.innerHTML.trim() === '' || historyContent.innerText.trim() === '' || historyContent.children.length === 0) {
+            historyContent.innerHTML = '<div class="loading-history">ACTUALMENTE NO ESTA DISPONIBLE EL HISTORIAL</div>';
+        }
+    }, 500); // 0.5 segundos de espera
 }
 });
 
